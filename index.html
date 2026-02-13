@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine & Xuân Bính Ngọ ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Quicksand:wght@300;400;500;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Popup Hỏi Yêu -->
+    <div class="love-popup" id="lovePopup">
+        <div class="popup-content">
+            <div class="popup-hearts">
+                <span class="popup-heart">❤️</span>
+                <span class="popup-heart">💕</span>
+                <span class="popup-heart">💖</span>
+            </div>
+            <h2 class="popup-question">Em có yêu anh không?</h2>
+            <div class="popup-buttons">
+                <button class="btn-yes" id="btnYes">Có </button>
+                <button class="btn-no" id="btnNo">Không </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Canvas cho Confetti -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <!-- Particles Hoa Đào & Tim -->
+    <div class="particles-container" id="particlesContainer"></div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="valentine-badge">
+                    <span class="badge-text">Valentine 2026 </span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line">Happy Valentine</span>
+                    <span class="title-heart">❤️</span>
+                </h1>
+                <h2 class="lunar-title">Chúc Mừng Xuân Bính Ngọ</h2>
+                <div class="lover-name">
+                    <span class="name-text">Dành tặng em yêu</span>
+                    <div class="name-highlight">Bae bấm ở dưới nhé</div>
+                </div>
+                <button class="cta-button" id="ctaButton">
+                    <span class="button-text">Bấm vào đây nhé</span>
+                    <span class="button-icon">❤️</span>
+                </button>
+            </div>
+            <div class="floating-hearts" id="floatingHearts"></div>
+        </section>
+
+        <!-- Message Section -->
+        <section class="message-section" id="messageSection">
+            <div class="message-container">
+                <div class="message-card">
+                    <div class="card-decoration">
+                        <span class="deco-flower">🌸</span>
+                        <span class="deco-flower">🌺</span>
+                    </div>
+                    <h3 class="message-title">Lời Nhắn Yêu Thương</h3>
+                    <div class="message-content" id="messageContent"></div>
+                    <div class="message-footer">
+                        <span class="footer-heart">💝</span>
+                        <p class="footer-text">Yêu em nhiều lắm!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery-section" id="gallerySection">
+            <div class="gallery-container">
+                <h3 class="gallery-title">Kỷ Niệm Của Chúng Mình</h3>
+                <div class="gallery-slider">
+                    <button class="slider-btn slider-prev" id="sliderPrev">‹</button>
+                    <div class="slider-wrapper">
+                        <div class="slider-track" id="sliderTrack">
+                            <!-- Placeholder images - thay thế bằng ảnh thật -->
+                            <div class="slider-item active">
+                                <div class="image-placeholder">
+                                    <span class="placeholder-icon">📷</span>
+                                    <p class="placeholder-text">Khoảnh khắc đầu tiên</p>
+                                </div>
+                                <p class="slider-caption">Ngày chúng ta gặp nhau ❤️</p>
+                            </div>
+                            <div class="slider-item">
+                                <div class="image-placeholder">
+                                    <span class="placeholder-icon">💕</span>
+                                    <p class="placeholder-text">Kỷ niệm ngọt ngào</p>
+                                </div>
+                                <p class="slider-caption">Những ngày bên em thật tuyệt vời</p>
+                            </div>
+                            <div class="slider-item">
+                                <div class="image-placeholder">
+                                    <span class="placeholder-icon">🌹</span>
+                                    <p class="placeholder-text">Tình yêu mãi mãi</p>
+                                </div>
+                                <p class="slider-caption">Yêu em đến mãi mãi 💖</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="slider-btn slider-next" id="sliderNext">›</button>
+                </div>
+                <div class="slider-dots" id="sliderDots"></div>
+            </div>
+        </section>
+
+        <!-- Interactive Heart Section -->
+        <section class="heart-section">
+            <div class="heart-container">
+                <div class="big-heart" id="bigHeart">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M50,90 C20,70 5,50 5,35 C5,20 15,10 25,10 C35,10 45,20 50,30 C55,20 65,10 75,10 C85,10 95,20 95,35 C95,50 80,70 50,90 Z" fill="currentColor"/>
+                    </svg>
+                </div>
+                <p class="heart-hint">❤️ Click vào trái tim ❤️</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-glow"></div>
+                <p class="footer-message">Yêu em mãi mãi ❤️</p>
+                <div class="footer-decoration">
+                    <span class="footer-star">✨</span>
+                    <span class="footer-star">💫</span>
+                    <span class="footer-star">✨</span>
+                </div>
+                <p class="footer-date">Valentine & Xuân Bính Ngọ 2026</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Audio Control -->
+    <div class="audio-control" id="audioControl">
+        <button class="audio-btn" id="audioBtn">
+            <span class="audio-icon" id="audioIcon">🔊</span>
+        </button>
+    </div>
+
+    <!-- Background Audio -->
+    <audio id="bgMusic" loop>
+        <!-- Thêm link nhạc nền của bạn vào đây -->
+        <!-- <source src="your-music.mp3" type="audio/mpeg"> -->
+    </audio>
+
+    <!-- Fireworks Canvas -->
+    <canvas id="fireworksCanvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
